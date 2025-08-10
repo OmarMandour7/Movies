@@ -22,7 +22,7 @@ export default function MovieDetails(){
   return (
     <div className="bg-black">
         <NavBar/>
- <section className="mx-auto max-w-7xl px-1 sm:px-6 lg:px-8 ">
+ <section className="mx-auto max-w-7xl px-0 sm:px-6 lg:px-8 ">
       <div className="relative overflow-hidden py-5 rounded-2xl ring-4 ring-white/10">
         {/* الخلفية */}
         <img

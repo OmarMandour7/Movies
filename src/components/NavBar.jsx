@@ -18,7 +18,7 @@ const NavBar = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
         {/* Left: Brand & Nav */}
         <div className="flex items-center gap-6">
-          <a href="#" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <div className="h-7 w-7 grid place-items-center rounded-md bg-gradient-to-br from-black to-black-100">
               <span className="sr-only">StreamVibe</span>
               <Play className="h-4 w-4 text-white" />

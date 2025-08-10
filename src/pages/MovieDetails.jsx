@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { getMovieDetails } from "../components/api";
 import { Play, Plus, ThumbsUp, Volume2 } from "lucide-react";
 import AllMovieSection from "../components/AllMovieSection";
+import NavBar from "../components/NavBar";
 
 export default function MovieDetails(){
   const { id } = useParams();
@@ -20,6 +21,7 @@ export default function MovieDetails(){
   console.log(poster)
   return (
     <div className="bg-black">
+        <NavBar/>
  <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
       <div className="relative overflow-hidden py-5 rounded-2xl ring-4 ring-white/10">
         {/* الخلفية */}

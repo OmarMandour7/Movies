@@ -14,7 +14,7 @@ console.log(movies)
 
   return (
    <section className="border-t border-white/5 bg-black justify-center ">
-  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+  <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-8">
     <div className="mb-4 flex items-end justify-between">
       <h2 className="text-white text-xl font-semibold">Popular Movies</h2>
     

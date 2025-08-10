@@ -4,9 +4,10 @@ import Hero from '../components/Hero'
 import AllMovieSection from '../components/AllMovieSection'
 
 const HomePage = () => {
+
   return (
     <div>
-        <NavBar/>
+        <NavBar  />
     
         <div>
           <Hero/>

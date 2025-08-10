@@ -60,3 +60,17 @@ export async function getMovieDetails( id) {
   });
   return res.data; // فيه title, overview, genres, runtime, backdrop_path, poster_path, vote_average...
 }
+// Search (multi) على الأفلام والمسلسلات والأشخاص
+export async function searchMulti( query, page = 1) {
+  if (!apiKey || !query) return null;
+  const { data } = await axios.get("https://api.themoviedb.org/3/search/multi", {
+    params: {
+      api_key: apiKey,
+      language: "en-US",
+      include_adult: false,
+      query,
+      page,
+    },
+  });
+  return data; // {results, page, total_pages, total_results}
+}

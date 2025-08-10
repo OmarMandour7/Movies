@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Search, Bell, ChevronRight, Play } from "lucide-react";
+import SearchBar from './SearchBar';
 const NavBar = () => {
+  const [openSearch, setOpenSearch] = useState(true);
+
     const cx = (...a) => a.filter(Boolean).join(" ");
     const TOKENS = {
   bg: "#0b0f14",
@@ -49,9 +52,15 @@ const NavBar = () => {
 
         {/* Right: Actions */}
         <div className="flex items-center gap-1">
-          <button className="h-9 w-9 grid place-items-center rounded-lg text-gray-300 hover:text-white hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]" style={{"--ring": TOKENS.ring}}>
-            <Search className="h-5 w-5" />
-          </button>
+          <button onClick={() => setOpenSearch((v) => !v)} className="h-9 w-9 ...">
+  <Search className="h-5 w-5" />
+</button>
+          {openSearch && (
+  <div className=" px-4 pb-3">
+    <SearchBar />
+  </div>
+)}
+
           <button className="h-9 w-9 grid place-items-center rounded-lg text-gray-300 hover:text-white hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--ring)]" style={{"--ring": TOKENS.ring}}>
             <Bell className="h-5 w-5" />
           </button>

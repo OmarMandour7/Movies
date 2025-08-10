@@ -4,6 +4,7 @@ import MovieCard from './MovieCard';
 
 const AllMovieSection = () => {
     const [movies, setMovies] = useState([]);
+
     useEffect(() => {
   getAllMovies(1).then((data) => {
     if (data?.results) setMovies(data.results);
